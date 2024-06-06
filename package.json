@@ -4,7 +4,7 @@
   "description": "Social Media Client course assignement from Noroff.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/oddvarzk/SocialClient/issues"
   },
-  "homepage": "https://github.com/oddvarzk/SocialClient/tree/JS2#readme"
+  "homepage": "https://github.com/oddvarzk/SocialClient/tree/JS2#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.0"
+  }
 }

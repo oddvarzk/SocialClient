@@ -1,3 +1,53 @@
+.primary-blue {
+  color: #007bff;
+}
 
+.dark-blue {
+  color: #0056b3;
+}
+
+.light-blue {
+  color: #b3d7ff;
+}
+
+.accent-blue {
+  color: #33afff;
+}
+
+.contrast-blue {
+  color: #004080;
+}
+
+.white {
+  color: #ffffff;
+}
+
+.light-gray {
+  color: #f2f2f2;
+}
+
+.medium-gray {
+  color: #cccccc;
+}
+
+.dark-gray {
+  color: #333333;
+}
+
+.black {
+  color: #000000;
+}
+
+body {
+  background-color: #f2f2f2;
+}
+
+h1 {
+  color: #007bff;
+}
+
+p {
+  color: #333333;
+}
 
 /*# sourceMappingURL=styles.css.map */

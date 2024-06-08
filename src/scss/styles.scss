@@ -1,5 +1,6 @@
 @use "sass:map";
 
+// Define the colors map
 $colours: (
   // Primary Color Palette
   "primary-blue": #007bff,
@@ -21,6 +22,18 @@ $colours: (
   @return map.get($colours, $colour-name);
 }
 
+// Define the fonts map
+$fonts: (
+  "primary-font": "Helvetica, Arial, sans-serif",
+  "secondary-font": "Georgia, serif",
+  "monospace-font": "Courier New, monospace"
+);
+
+// Function to get the fonts
+@function theme-font($font-name) {
+  @return map.get($fonts, $font-name);
+}
+
 // Mixin to apply theme colors
 @mixin apply-theme-colors($map) {
   @each $key, $value in $map {
@@ -30,19 +43,31 @@ $colours: (
   }
 }
 
-// Apply the mixin to the colors map
+// Mixin to apply theme fonts
+@mixin apply-theme-fonts($map) {
+  @each $key, $value in $map {
+    .#{$key} {
+      font-family: $value;
+    }
+  }
+}
+
+// Include the mixins
 @include apply-theme-colors($colours);
+@include apply-theme-fonts($fonts);
 
 // Example usage
 body {
   background-color: theme-color("light-gray");
-  margin: 0;
+  font-family: theme-font("primary-font");
 }
 
 h1 {
   color: theme-color("primary-blue");
+  font-family: theme-font("secondary-font");
 }
 
 p {
   color: theme-color("dark-gray");
+  font-family: theme-font("monospace-font");
 }

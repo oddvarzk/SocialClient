@@ -4,7 +4,9 @@
   "description": "Social Media Client course assignement from Noroff.",
   "main": "index.js",
   "scripts": {
-    
+    "watch": "sass src/scss:dist/css --watch",
+    "start": "live-server",
+    "dev": "npm-run-all --parallel watch start"
   },
   "repository": {
     "type": "git",
@@ -24,6 +26,11 @@
   },
   "homepage": "https://github.com/oddvarzk/SocialClient/tree/JS2#readme",
   "dependencies": {
-    "bootstrap": "^5.2.0"
+    "bootstrap": "^5.2.0",
+    "live-server": "^1.1.0"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.77.4"
   }
 }

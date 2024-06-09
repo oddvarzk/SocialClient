@@ -74,17 +74,22 @@ p {
 
 .navbar-brand {
   color: theme-color("white");
+  font-weight: bold;
 }
 
 .navbar-login {
   color: theme-color("white");
   text-decoration: none;
   font-size: large;
+  font-weight: bold;
+
 }
 
 .navbar-register {
   color: theme-color("white");
   text-decoration: none;
   font-size: large;
+  font-weight: bold;
+  border: 1;
 
 }

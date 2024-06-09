@@ -67,18 +67,22 @@ p {
 
 .navbar-brand {
   color: #ffffff;
+  font-weight: bold;
 }
 
 .navbar-login {
   color: #ffffff;
   text-decoration: none;
   font-size: large;
+  font-weight: bold;
 }
 
 .navbar-register {
   color: #ffffff;
   text-decoration: none;
   font-size: large;
+  font-weight: bold;
+  border: 1;
 }
 
 /*# sourceMappingURL=styles.css.map */

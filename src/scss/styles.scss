@@ -58,7 +58,7 @@ $fonts: (
 
 // Example usage
 body {
-  background-color: theme-color("light-gray");
+  background-color: theme-color("light-blue");
   font-family: theme-font("primary-font");
 }
 
@@ -70,4 +70,21 @@ h1 {
 p {
   color: theme-color("dark-gray");
   font-family: theme-font("monospace-font");
+}
+
+.navbar-brand {
+  color: theme-color("white");
+}
+
+.navbar-login {
+  color: theme-color("white");
+  text-decoration: none;
+  font-size: large;
+}
+
+.navbar-register {
+  color: theme-color("white");
+  text-decoration: none;
+  font-size: large;
+
 }

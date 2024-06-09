@@ -38,16 +38,47 @@
   color: #000000;
 }
 
+.primary-font {
+  font-family: "Helvetica, Arial, sans-serif";
+}
+
+.secondary-font {
+  font-family: "Georgia, serif";
+}
+
+.monospace-font {
+  font-family: "Courier New, monospace";
+}
+
 body {
-  background-color: #f2f2f2;
+  background-color: #b3d7ff;
+  font-family: "Helvetica, Arial, sans-serif";
 }
 
 h1 {
   color: #007bff;
+  font-family: "Georgia, serif";
 }
 
 p {
   color: #333333;
+  font-family: "Courier New, monospace";
+}
+
+.navbar-brand {
+  color: #ffffff;
+}
+
+.navbar-login {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: large;
+}
+
+.navbar-register {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: large;
 }
 
 /*# sourceMappingURL=styles.css.map */

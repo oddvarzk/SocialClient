@@ -15,7 +15,7 @@
 }
 
 .contrast-blue {
-  color: #004080;
+  color: #133e69;
 }
 
 .white {
@@ -23,7 +23,7 @@
 }
 
 .light-gray {
-  color: #f2f2f2;
+  color: #c9c6c6;
 }
 
 .medium-gray {
@@ -31,7 +31,7 @@
 }
 
 .dark-gray {
-  color: #333333;
+  color: #272727;
 }
 
 .black {
@@ -51,8 +51,8 @@
 }
 
 body {
-  background-color: #b3d7ff;
-  font-family: "Helvetica, Arial, sans-serif";
+  background-color: #133e69;
+  font-family: "Georgia, serif";
 }
 
 h1 {
@@ -61,28 +61,40 @@ h1 {
 }
 
 p {
-  color: #333333;
+  color: #c9c6c6;
   font-family: "Courier New, monospace";
 }
 
 .navbar-brand {
   color: #ffffff;
-  font-weight: bold;
+  font-weight: light;
+  font-size: 24px;
 }
 
 .navbar-login {
   color: #ffffff;
   text-decoration: none;
   font-size: large;
-  font-weight: bold;
+  font-weight: light;
 }
 
 .navbar-register {
   color: #ffffff;
   text-decoration: none;
   font-size: large;
-  font-weight: bold;
-  border: 1;
+  font-weight: light;
+  border: solid 1px;
+}
+
+.home-image {
+  height: 50%;
+  width: 40%;
+}
+
+.home-button {
+  background-color: #272727;
+  text-decoration: none;
+  color: #c9c6c6;
 }
 
 /*# sourceMappingURL=styles.css.map */

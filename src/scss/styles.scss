@@ -7,13 +7,13 @@ $colours: (
   "dark-blue": #0056b3,
   "light-blue": #b3d7ff,
   "accent-blue": #33afff,
-  "contrast-blue": #004080,
+  "contrast-blue": #133e69,
 
   // Secondary Color Palette
   "white": #ffffff,
-  "light-gray": #f2f2f2,
+  "light-gray": #c9c6c6,
   "medium-gray": #cccccc,
-  "dark-gray": #333333,
+  "dark-gray": #272727,
   "black": #000000
 );
 
@@ -58,8 +58,8 @@ $fonts: (
 
 // Example usage
 body {
-  background-color: theme-color("light-blue");
-  font-family: theme-font("primary-font");
+  background-color: theme-color("contrast-blue");
+  font-family: theme-font("secondary-font");
 }
 
 h1 {
@@ -68,20 +68,21 @@ h1 {
 }
 
 p {
-  color: theme-color("dark-gray");
+  color: theme-color("light-gray");
   font-family: theme-font("monospace-font");
 }
 
 .navbar-brand {
   color: theme-color("white");
-  font-weight: bold;
+  font-weight: light;
+  font-size: 24px;
 }
 
 .navbar-login {
   color: theme-color("white");
   text-decoration: none;
   font-size: large;
-  font-weight: bold;
+  font-weight: light;
 
 }
 
@@ -89,7 +90,16 @@ p {
   color: theme-color("white");
   text-decoration: none;
   font-size: large;
-  font-weight: bold;
-  border: 1;
+  font-weight: light;
+  border: solid 1px;
 
+}
+.home-image {
+  height: 50%;
+  width: 40%;
+}
+.home-button{
+  background-color: theme-color("dark-gray");
+  text-decoration: none;
+  color: theme-color("light-gray");
 }

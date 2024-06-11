@@ -7,7 +7,7 @@ $colours: (
   "dark-blue": #0056b3,
   "light-blue": #b3d7ff,
   "accent-blue": #33afff,
-  "contrast-blue": #133e69,
+  "contrast-blue": #0e243a,
 
   // Secondary Color Palette
   "white": #ffffff,
@@ -26,7 +26,7 @@ $colours: (
 $fonts: (
   "primary-font": "Helvetica, Arial, sans-serif",
   "secondary-font": "Georgia, serif",
-  "monospace-font": "Courier New, monospace"
+  "monospace-font": "Courier New, monospace",
 );
 
 // Function to get the fonts
@@ -59,7 +59,7 @@ $fonts: (
 // Example usage
 body {
   background-color: theme-color("contrast-blue");
-  font-family: theme-font("secondary-font");
+  font-family: theme-font("primary-font");
 }
 
 h1 {
@@ -83,23 +83,29 @@ p {
   text-decoration: none;
   font-size: large;
   font-weight: light;
-
 }
 
 .navbar-register {
   color: theme-color("white");
   text-decoration: none;
-  font-size: large;
-  font-weight: light;
-  border: solid 1px;
-
 }
 .home-image {
-  height: 50%;
-  width: 40%;
+  height: 50vh;
+  width: 30%;
 }
-.home-button{
-  background-color: theme-color("dark-gray");
+.home-button {
+  background-color: theme-color("dark-blue");
+  border: solid theme-color("dark-blue");
   text-decoration: none;
   color: theme-color("light-gray");
+  width: 70px;
+}
+.info-text {
+  font-weight: light;
+}
+a {
+  text-decoration: none;
+}
+.nav-border {
+  background-color: #000000;
 }

@@ -15,7 +15,7 @@
 }
 
 .contrast-blue {
-  color: #133e69;
+  color: #0e243a;
 }
 
 .white {
@@ -51,8 +51,8 @@
 }
 
 body {
-  background-color: #133e69;
-  font-family: "Georgia, serif";
+  background-color: #0e243a;
+  font-family: "Helvetica, Arial, sans-serif";
 }
 
 h1 {
@@ -81,20 +81,31 @@ p {
 .navbar-register {
   color: #ffffff;
   text-decoration: none;
-  font-size: large;
-  font-weight: light;
-  border: solid 1px;
 }
 
 .home-image {
-  height: 50%;
-  width: 40%;
+  height: 50vh;
+  width: 30%;
 }
 
 .home-button {
-  background-color: #272727;
+  background-color: #0056b3;
+  border: solid #0056b3;
   text-decoration: none;
   color: #c9c6c6;
+  width: 70px;
+}
+
+.info-text {
+  font-weight: light;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav-border {
+  background-color: #000000;
 }
 
 /*# sourceMappingURL=styles.css.map */

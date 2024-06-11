@@ -1,38 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/dist/css/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/dist/css/styles.css" />
     <title>Social Media Client</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <div class="navbar navbar-dark flex justify-between px-5 py-3">
-        <div class="navbar-section">
-            <a class="navbar-brand px-2">Social Client</a>
-        </div>
-        <div class="navbar-section">
-            <a class="navbar-login px-2">Login</a>
-            <a class="navbar-register px-2">Register</a>
-        </div>
+      <div class="navbar-section">
+        <a href="/index.html" class="navbar-brand px-2">Social Client</a>
+      </div>
+      <div class="navbar-section">
+        <a class="navbar-login px-2">Login</a>
+        <a class="navbar-register px-2">Register</a>
+      </div>
     </div>
     <div class="border"></div>
 
-    <div class="flex justify-center text-center py-5">
+    <div class="flex flex-wrap">
+      <div class="flex justify-center text-center py-5">
         <h3 class="white">Welcome To Social Client</h3>
-        <p>To access our website, please either Login or Register on one of the buttons below.</p>
-            <div class="buttons-container flex flex-wrap">
-                <a class="home-button p-1 shadow">Login</a>
-                <a class="home-button p-1 shadow">Register</a>
-            </div>
-            <div class="image-container col py-5">
-                <img class="home-image rounded-circle shadow" src="/images/HAL-Publications-1.jpg">
-            </div>
-            <div class="info-container">
-                <h4 class="white font-light">Connecting you with people from around the globe!</h4>
-            </div>
+        <p class="info-text white">
+          To access our website, please either Login or Register on one of the
+          buttons below.
+        </p>
+        <div class="buttons-container flex flex-wrap">
+          <a href="">
+            <button class="home-button p-1 shadow m-2">Login</button>
+          </a>
+          <a href="">
+            <button class="home-button p-1 shadow m-2">Register</button>
+          </a>
+        </div>
+        <div class="image-container col py-5">
+          <img
+            class="home-image rounded-circle shadow"
+            src="/images/HAL-Publications-1.jpg"
+          />
+        </div>
+        <div class="info-container">
+          <h4 class="white font-light">
+            Connecting you with people from around the globe!
+          </h4>
+        </div>
+      </div>
     </div>
-</body>
+    <div class="container">
+      <div>
+        <div class="register-container">
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input
+                type="email"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Enter email"
+              />
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="exampleInputPassword1"
+                placeholder="Password"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

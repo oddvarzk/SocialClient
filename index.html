@@ -3,11 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="This is the Home Page for the Social Client, where a user can also register an account.">
     <link
       rel="stylesheet"
       href="node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="/dist/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Social Media Client</title>
   </head>
   <body>
@@ -16,48 +20,53 @@
         <a href="/index.html" class="navbar-brand px-2">Social Client</a>
       </div>
       <div class="navbar-section">
-        <a class="navbar-login px-2">Login</a>
-        <a class="navbar-register px-2">Register</a>
+        <a href="/login/" class="navbar-login hover-bg-white">Login</a>
       </div>
     </div>
     <div class="border"></div>
 
-    <div class="container py-5">
+    <div class="home-content container py-5 px-2">
       <div class="row flex-wrap gap-5">
         <div class="col-md-6">
           <h3 class="white text-center py-2">Welcome To Social Client</h3>
           <p class="white text-center">
-            To access our website, please either Login or Register on one of the
-            buttons below.
+            To access our website, please either Login below or Register on the panel to the side.
           </p>
-          <div class="text-center py-3">
-            <a href="">
+          <div class="text-center py-4">
+            <a href="/login/">
               <button class="home-button">Login</button>
             </a>
-            <a href="">
-              <button class="home-button">Register</button>
-            </a>
           </div>
-          <div class="container text-center">
+          <div class="container text-center py-3">
             <img
               class="home-image rounded-circle shadow"
               src="/images/HAL-Publications-1.jpg"
             />
           </div>
         </div>
-        <div class="col-md-4">
-          <h3 class="white text-center py-2">Create an account</h3>
+        <div class="col-md-4 rounded shadow h-70 registerContainer mt-3">
+          <h3 class="black text-center py-3">Create an account</h3>
           <form>
-            <div class="form-group py-1">
-              <label class="white py-2" for="Email">E-mail address</label>
+            <div class="form-group">
+              <label class="black py-2" for="username">Username</label>
+              <input type="username" class="form-control" id="username" />
+            </div>
+            <div class="form-group">
+              <label class="black py-2" for="Email">E-mail address</label>
               <input type="email" class="form-control" id="Email" />
             </div>
             <div class="form-group py-2">
-              <label class="white" for="Password">Password</label>
+              <label class="black" for="Password">Password</label>
               <input type="password" class="form-control" id="Password" />
             </div>
-            <button type="submit" class="btn btn-dark">Submit</button>
+            <p class="black">Already have an account? <a class="blue" href="">Login here</a></p>
+            <button type="submit" class="btn btn-dark">Register</button>
           </form>
+          <div class="px-2 py-3">
+            <p class="black font-weight-lighter"><span class="dot">&#183;</span> Register with @stud.noroff.no or @noroff.no</p>
+            <p class="black font-weight-lighter"><span class="dot">&#183;</span> Password must be atleast 8 characters.</p>
+
+          </div>
         </div>
       </div>
     </div>

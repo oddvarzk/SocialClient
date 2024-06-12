@@ -1,13 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 .primary-blue {
   color: #007bff;
 }
 
 .dark-blue {
-  color: #0056b3;
+  color: #013b79;
 }
 
 .light-blue {
-  color: #b3d7ff;
+  color: #91aecf;
 }
 
 .accent-blue {
@@ -23,7 +24,7 @@
 }
 
 .light-gray {
-  color: #c9c6c6;
+  color: #ebe5e5;
 }
 
 .medium-gray {
@@ -39,7 +40,7 @@
 }
 
 .primary-font {
-  font-family: "Helvetica, Arial, sans-serif";
+  font-family: "Poppins, sans-serif";
 }
 
 .secondary-font {
@@ -52,17 +53,17 @@
 
 body {
   background-color: #0e243a;
-  font-family: "Helvetica, Arial, sans-serif";
+  font-family: "Poppins, sans-serif";
 }
 
 h1 {
   color: #007bff;
-  font-family: "Georgia, serif";
+  font-family: "Poppins, sans-serif";
 }
 
 p {
-  color: #c9c6c6;
-  font-family: "Courier New, monospace";
+  color: #ebe5e5;
+  font-family: "Poppins, sans-serif";
 }
 
 .navbar-brand {
@@ -82,15 +83,16 @@ p {
 }
 
 .home-image {
-  height: 40vh;
-  width: 100%;
+  height: 25vh;
+  max-width: 50%;
+  object-fit: cover;
 }
 
 .home-button {
-  background-color: #0056b3;
-  border: solid #0056b3;
+  background-color: #013b79;
+  border: solid #013b79;
   text-decoration: none;
-  color: #c9c6c6;
+  color: #ebe5e5;
   width: 70px;
 }
 
@@ -104,6 +106,10 @@ a {
 
 .nav-border {
   background-color: #000000;
+}
+
+.registerContainer {
+  background-color: #ebe5e5;
 }
 
 /*# sourceMappingURL=styles.css.map */

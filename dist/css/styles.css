@@ -65,6 +65,10 @@ body {
   object-fit: cover;
 }
 
+.home-image:hover {
+  opacity: 0.8;
+}
+
 .home-button {
   background-color: #013b79;
   border: solid #013b79;

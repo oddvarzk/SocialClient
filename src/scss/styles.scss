@@ -78,6 +78,9 @@ body {
   max-width: 50%;
   object-fit: cover;
 }
+.home-image:hover {
+  opacity: 0.8;
+}
 .home-button {
   background-color: theme-color("dark-blue");
   border: solid theme-color("dark-blue");

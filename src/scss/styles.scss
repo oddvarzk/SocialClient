@@ -1,5 +1,6 @@
 @use "sass:map";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 // The colors map
 $colours: (
@@ -26,6 +27,7 @@ $colours: (
 // The fonts map
 $fonts: (
   "primary-font": "Poppins, sans-serif",
+  "secondary-font": "Roboto, sans-serif",
 );
 
 // Function to get the fonts
@@ -53,37 +55,23 @@ $fonts: (
 
 // The mixins
 @include apply-theme-colors($colours);
-@include apply-theme-fonts($fonts);
 
 body {
   background-color: theme-color("contrast-blue");
-  font-family: theme-font("primary-font");
-}
-
-h1 {
-  color: theme-color("primary-blue");
-  font-family: theme-font("primary-font");
-}
-
-p {
-  color: theme-color("light-gray");
-  font-family: theme-font("primary-font");
 }
 
 .navbar-brand {
-  color: theme-color("white");
-  font-weight: light;
+  color: theme-color("light-blue");
   font-size: 24px;
+  font-style: italic;
 }
 
 .navbar-login {
   color: theme-color("white");
   text-decoration: none;
 }
-
-.navbar-register {
-  color: theme-color("white");
-  text-decoration: none;
+.navbar-login:hover {
+  color: theme-color("light-blue");
 }
 .home-image {
   height: 25vh;
@@ -97,8 +85,10 @@ p {
   color: theme-color("light-gray");
   width: 70px;
 }
-.info-text {
-  font-weight: light;
+.home-button:hover {
+  background-color: theme-color("light-blue");
+  color: theme-color("dark-blue");
+  border: solid theme-color("light-blue");
 }
 a {
   text-decoration: none;
@@ -108,4 +98,8 @@ a {
 }
 .registerContainer {
   background-color: theme-color("light-gray");
+}
+p {
+  font-weight: lighter;
+  color: theme-color("light-gray");
 }

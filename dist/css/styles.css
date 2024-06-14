@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 .primary-blue {
   color: #007bff;
 }
@@ -39,29 +40,14 @@
   color: #000000;
 }
 
-.primary-font {
-  font-family: "Poppins, sans-serif";
-}
-
 body {
   background-color: #0e243a;
-  font-family: "Poppins, sans-serif";
-}
-
-h1 {
-  color: #007bff;
-  font-family: "Poppins, sans-serif";
-}
-
-p {
-  color: #ebe5e5;
-  font-family: "Poppins, sans-serif";
 }
 
 .navbar-brand {
-  color: #ffffff;
-  font-weight: light;
+  color: #91aecf;
   font-size: 24px;
+  font-style: italic;
 }
 
 .navbar-login {
@@ -69,9 +55,8 @@ p {
   text-decoration: none;
 }
 
-.navbar-register {
-  color: #ffffff;
-  text-decoration: none;
+.navbar-login:hover {
+  color: #91aecf;
 }
 
 .home-image {
@@ -88,8 +73,10 @@ p {
   width: 70px;
 }
 
-.info-text {
-  font-weight: light;
+.home-button:hover {
+  background-color: #91aecf;
+  color: #013b79;
+  border: solid #91aecf;
 }
 
 a {
@@ -102,6 +89,11 @@ a {
 
 .registerContainer {
   background-color: #ebe5e5;
+}
+
+p {
+  font-weight: lighter;
+  color: #ebe5e5;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -28,19 +28,22 @@
   <body>
     <div class="navbar navbar-dark flex justify-between px-5 py-3">
       <div class="navbar-section px-5">
-        <a href="/" class="navbar-brand">Social Client</a>
+        <a href="/feed/" class="navbar-brand">Social Client</a>
       </div>
       <div class="navbar-section px-5">
-        <a href="/index.html" class="navbar-login hover-bg-white">Feed</a>
-        <a href="/login/" class="navbar-login hover-bg-white px-3">Logout</a>
+        <a href="/feed/" class="navbar-login hover-bg-white">Feed</a>
+        <a href="/profile/" class="navbar-login hover-bg-white px-3">Profile</a>
+        <a href="/login/" class="navbar-login hover-bg-white">Logout</a>
       </div>
     </div>
     <div class="border border-secondary"></div>
 
+    <h4 class="text-center mt-4">Your Profile</h4>
+
     <div class="container">
       <div class="py-5 d-flex justify-content-center flex-wrap gap-4">
         <div class="px-5 py-1">
-          <img src="/images/profile-user.svg" alt="Profile Image" class="" />
+          <img src="/images/profile-user.svg" alt="Profile Image" />
           <p class="edit py-3 text-center">Edit profile image</p>
         </div>
         <div class="px-4">
@@ -50,7 +53,7 @@
             Password: <span class="profile-info"> ******** </span
             ><span class="m-2">Change password</span>
           </p>
-          <p>Posts: <span class="profile-info">1</span></p>
+          <p>Posts: <span class="profile-info">3</span></p>
         </div>
       </div>
     </div>
@@ -63,8 +66,13 @@
             <div class="card-header text-center">
               <h4 class="card-title">Post title</h4>
             </div>
-            <div class="card-body">
-              <p class="card-text">
+            <div class="card-body text-center gap-3">
+              <img
+                src="/images/european-shorthair-8601492_640.jpg"
+                class="card-img"
+                alt="cat image"
+              />
+              <p class="card-text text-start py-1">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
                 nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non
                 elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in
@@ -73,6 +81,10 @@
                 Nullam vel eros sit amet arcu vestibulum accumsan in in leo.
                 Fusce nec ex a turpis euismod semper.
               </p>
+            </div>
+            <div class="card-footer d-flex justify-content-between">
+              <button class="btn btn-primary">Edit</button>
+              <button class="btn btn-danger">Delete</button>
             </div>
           </div>
         </div>
@@ -83,8 +95,13 @@
             <div class="card-header text-center">
               <h4 class="card-title">Post title</h4>
             </div>
-            <div class="card-body">
-              <p class="card-text">
+            <div class="card-body text-center gap-3">
+              <img
+                src="/images/european-shorthair-8601492_640.jpg"
+                class="card-img"
+                alt="cat image"
+              />
+              <p class="card-text text-start py-1">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
                 nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non
                 elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in
@@ -93,6 +110,10 @@
                 Nullam vel eros sit amet arcu vestibulum accumsan in in leo.
                 Fusce nec ex a turpis euismod semper.
               </p>
+            </div>
+            <div class="card-footer d-flex justify-content-between">
+              <button class="btn btn-primary">Edit</button>
+              <button class="btn btn-danger">Delete</button>
             </div>
           </div>
         </div>
@@ -103,8 +124,13 @@
             <div class="card-header text-center">
               <h4 class="card-title">Post title</h4>
             </div>
-            <div class="card-body">
-              <p class="card-text">
+            <div class="card-body text-center gap-3">
+              <img
+                src="/images/european-shorthair-8601492_640.jpg"
+                class="card-img"
+                alt="cat image"
+              />
+              <p class="card-text text-start py-1">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
                 nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non
                 elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in
@@ -114,8 +140,13 @@
                 Fusce nec ex a turpis euismod semper.
               </p>
             </div>
+            <div class="card-footer d-flex justify-content-between">
+              <button class="btn btn-primary">Edit</button>
+              <button class="btn btn-danger">Delete</button>
+            </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   </body>

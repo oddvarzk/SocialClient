@@ -12,6 +12,7 @@
       href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="/dist/css/styles.css" />
+    <link rel="stylesheet" href="/dist/css/profile.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -27,13 +28,95 @@
   <body>
     <div class="navbar navbar-dark flex justify-between px-5 py-3">
       <div class="navbar-section px-5">
-        <a href="/index.html" class="navbar-brand">Social Client</a>
+        <a href="/" class="navbar-brand">Social Client</a>
       </div>
       <div class="navbar-section px-5">
-        <a href="/index.html" class="navbar-login hover-bg-white">Home</a>
-        <a href="/login/" class="navbar-login hover-bg-white px-2">Login</a>
+        <a href="/index.html" class="navbar-login hover-bg-white">Feed</a>
+        <a href="/login/" class="navbar-login hover-bg-white px-3">Logout</a>
       </div>
     </div>
     <div class="border border-secondary"></div>
+
+    <div class="container">
+      <div class="py-5 d-flex justify-content-center flex-wrap gap-4">
+        <div class="px-5 py-1">
+          <img src="/images/profile-user.svg" alt="Profile Image" class="" />
+          <p class="edit py-3 text-center">Edit profile image</p>
+        </div>
+        <div class="px-4">
+          <p>Username: <span class="profile-info">Example00</span></p>
+          <p>Email: <span class="profile-info">Example@noroff.no</span></p>
+          <p>
+            Password: <span class="profile-info"> ******** </span
+            ><span class="m-2">Change password</span>
+          </p>
+          <p>Posts: <span class="profile-info">1</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-5">
+      <h4 class="white text-center py-3">Your posts:</h4>
+      <div class="d-flex justify-content-center">
+        <div class="">
+          <div class="card">
+            <div class="card-header text-center">
+              <h4 class="card-title">Post title</h4>
+            </div>
+            <div class="card-body">
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non
+                elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in
+                in leo. Fusce nec ex a turpis euismod semper. Nulla nec purus
+                feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui.
+                Nullam vel eros sit amet arcu vestibulum accumsan in in leo.
+                Fusce nec ex a turpis euismod semper.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center">
+        <div class="">
+          <div class="card">
+            <div class="card-header text-center">
+              <h4 class="card-title">Post title</h4>
+            </div>
+            <div class="card-body">
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non
+                elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in
+                in leo. Fusce nec ex a turpis euismod semper. Nulla nec purus
+                feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui.
+                Nullam vel eros sit amet arcu vestibulum accumsan in in leo.
+                Fusce nec ex a turpis euismod semper.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center">
+        <div class="">
+          <div class="card">
+            <div class="card-header text-center">
+              <h4 class="card-title">Post title</h4>
+            </div>
+            <div class="card-body">
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non
+                elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in
+                in leo. Fusce nec ex a turpis euismod semper. Nulla nec purus
+                feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui.
+                Nullam vel eros sit amet arcu vestibulum accumsan in in leo.
+                Fusce nec ex a turpis euismod semper.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

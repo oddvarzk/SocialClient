@@ -13,7 +13,7 @@ $colours: (
 
   // Secondary Color Palette
   "white": #ffffff,
-  "light-gray": #ebe5e5,
+  "light-gray": #bdbdbd,
   "medium-gray": #cccccc,
   "dark-gray": #272727,
   "black": #000000
@@ -59,7 +59,9 @@ $fonts: (
 body {
   background-color: theme-color("contrast-blue");
 }
-
+h4 {
+  color: theme-color("medium-gray");
+}
 .navbar-brand {
   color: theme-color("light-blue");
   font-size: 24px;
@@ -85,8 +87,8 @@ body {
   background-color: theme-color("dark-blue");
   border: solid theme-color("dark-blue");
   text-decoration: none;
-  color: theme-color("light-gray");
-  width: 70px;
+  color: theme-color("white");
+  width: 90px;
 }
 .home-button:hover {
   background-color: theme-color("light-blue");
@@ -105,4 +107,12 @@ a {
 p {
   font-weight: lighter;
   color: theme-color("light-gray");
+}
+span {
+  color: theme-color("light-blue");
+  font-size: 14px;
+}
+.edit {
+  color: theme-color("light-blue");
+  font-size: 16px;
 }

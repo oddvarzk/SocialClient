@@ -29,7 +29,7 @@ export async function login(profile) {
 
     alert("User logged in successfully!");
 
-    // Redirect to the profile page
+    // Redirecting to the profile page after successful login.
     window.location.href = "/profile";
   } catch (error) {
     alert(`An error occurred: ${error.message}`);

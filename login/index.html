@@ -43,11 +43,23 @@
       <form id="loginForm">
         <div class="form-group">
           <label class="black py-2" for="Email">E-mail address</label>
-          <input type="email" class="form-control" id="Email" />
+          <input
+            type="email"
+            class="form-control"
+            id="Email"
+            autocomplete="email"
+            required
+          />
         </div>
         <div class="form-group py-2">
           <label class="black" for="Password">Password</label>
-          <input type="password" class="form-control" id="Password" />
+          <input
+            type="password"
+            class="form-control"
+            id="Password"
+            autocomplete="current-password"
+            required
+          />
         </div>
         <p class="black">
           Don't have an account?

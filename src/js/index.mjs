@@ -1,7 +1,6 @@
 import { setRegisterFormListener } from "./handlers/register.mjs";
 import { setLoginFormListener } from "./handlers/login.mjs";
-
-import { createPost } from "./api/posts/create.mjs";
+import * as post from "./api/posts/index.mjs";
 
 const path = location.pathname;
 
@@ -11,7 +10,9 @@ if (path === "/index.html") {
   setLoginFormListener();
 }
 
-createPost({
-  title: "Hello, world!",
-  body: "Testiiiing.",
-});
+//post.createPost();
+//post.updatePost();
+//post.removePost();
+//post.getPost();
+//post.getPosts().then(console.log);
+post.getPost(2174).then(console.log);

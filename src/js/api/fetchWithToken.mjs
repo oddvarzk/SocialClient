@@ -11,7 +11,7 @@ export function headers() {
   };
 }
 
-export async function fetchWithToken(url, options) {
+export async function fetchWithToken(url, options = {}) {
   return fetch(url, {
     ...options,
     headers: headers(),

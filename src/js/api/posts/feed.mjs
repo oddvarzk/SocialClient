@@ -32,6 +32,7 @@ async function fetchPosts(page = 1) {
 
     const data = await response.json();
 
+    console.log(data);
     // Check if the data contains posts (data.data should exist)
     if (data && data.data) {
       const postsContainer = document.getElementById('posts-container');
@@ -82,6 +83,6 @@ async function fetchPosts(page = 1) {
     console.error('Error fetching posts:', error);
   }
 }
-
+console.log(fetchPosts);
 // Initial call to load posts
 fetchPosts();

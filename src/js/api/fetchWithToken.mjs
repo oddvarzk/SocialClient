@@ -1,8 +1,8 @@
-import { load } from "../storage/index.mjs";
+import { loadToken } from "../storage/index.mjs";
 import { API_KEY } from "./constants.mjs";
 
 export function headers() {
-  const token = load("token");
+  const token = loadToken("token");
 
   return {
     "Content-Type": "application/json",

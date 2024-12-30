@@ -10,7 +10,17 @@ export function setRegisterFormListener() {
       const formData = new FormData(form);
       const profile = Object.fromEntries(formData.entries());
 
-      register(profile);
+      // Call register function
+      register(profile)
+        .then((result) => {
+          // On successful registration, redirect to the login page
+          alert("User registered successfully!");
+          window.location.href = "/login"; // Redirect to login page
+        })
+        .catch((error) => {
+          // Handle registration failure
+          alert(`Registration failed: ${error.message}`);
+        });
     });
   }
 }

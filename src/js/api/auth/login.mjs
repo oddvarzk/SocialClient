@@ -1,9 +1,15 @@
 import { API_BASE } from "../constants.mjs";
-import * as storage from "../../storage/index.mjs";
+// Import our new storage functions individually
+import { saveToken, saveObject } from "../../storage/index.mjs";
 
 const action = "auth/login"; // The API endpoint path
-const method = "POST"; // The HTTP method
+const method = "POST";       // The HTTP method
 
+/**
+ * Login function that sends a login request to the server and handles the response.
+ * @param {Object} profile - User's profile with email and password.
+ * @returns {Promise} Resolves on successful login.
+ */
 export async function login(profile) {
   const loginURL = API_BASE + action;
 
@@ -17,21 +23,20 @@ export async function login(profile) {
     });
 
     if (!response.ok) {
-      const error = await response.json();
-      alert(`Login failed: ${error.message}`);
-      return;
+      const errorData = await response.json();
+      throw new Error(errorData.message);  // Reject if login fails
     }
 
     const result = await response.json();
 
-    storage.save("token", result.data.accessToken);
-    storage.save("profile", result.data);
+    // Store token (as raw string) and profile (as JSON object) in localStorage
+    saveToken("token", result.data.accessToken);
+    saveObject("profile", result.data);
 
-    alert("User logged in successfully!");
-
-    // Redirecting to the profile page after successful login.
-    window.location.href = "/profile";
+    // Resolve when login is successful
+    return Promise.resolve();
   } catch (error) {
-    alert(`An error occurred: ${error.message}`);
+    // Reject on error
+    return Promise.reject(error);
   }
 }

@@ -1,153 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="This is the Login Page for the social media client. Where a user can login with a registered account."
-    />
-    <link
-      rel="stylesheet"
-      href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="/dist/css/styles.css" />
-    <link rel="stylesheet" href="/dist/css/profile.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <title>Social Media Client</title>
-  </head>
-  <body>
-    <div class="navbar navbar-dark flex justify-between px-5 py-3">
-      <div class="navbar-section px-5">
-        <a href="/feed/" class="navbar-brand">Social Client</a>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="This is the Login Page for the social media client. Where a user can login with a registered account." />
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/dist/css/styles.css" />
+  <link rel="stylesheet" href="/dist/css/profile.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <title>Social Media Client</title>
+</head>
+
+<body>
+  <!-- Navbar for Logged-In User -->
+  <div class="navbar navbar-dark flex justify-between py-3 flex-nowrap">
+    <div class="navbar-section">
+      <a href="/feed/" class="navbar-brand">Social Client</a>
+    </div>
+    <div class="navbar-section">
+      <a href="/feed/" class="navbar-login hover-bg-white">Feed</a>
+      <a href="/profile/" class="navbar-login hover-bg-white px-3">Profile</a>
+      <a href="/login/" class="navbar-login hover-bg-white">Logout</a>
+    </div>
+  </div>
+
+  <!-- Border -->
+  <div class="border border-secondary"></div>
+
+
+  <h4 class="text-center mt-4">Your Profile</h4>
+
+  <div class="container">
+    <div class="py-5 d-flex justify-content-center flex-wrap gap-4">
+      <div class="px-5 py-1">
+        <img src="/images/profile-user.svg" alt="Profile Image" />
+        <p class="edit py-3 text-center">Edit profile image</p>
       </div>
-      <div class="navbar-section px-5">
-        <a href="/feed/" class="navbar-login hover-bg-white">Feed</a>
-        <a href="/profile/" class="navbar-login hover-bg-white px-3">Profile</a>
-        <a href="/login/" class="navbar-login hover-bg-white">Logout</a>
+      <div class="px-4">
+        <p>Username: <span class="profile-info">Example00</span></p>
+        <p>Email: <span class="profile-info">Example@noroff.no</span></p>
+        <p>
+          Password: <span class="profile-info"> ******** </span><span class="m-2">Change password</span>
+        </p>
+        <p>Posts: <span class="profile-info">3</span></p>
       </div>
     </div>
-    <div class="border border-secondary"></div>
+  </div>
 
-    <h4 class="text-center mt-4">Your Profile</h4>
-
-    <div class="container">
-      <div class="py-5 d-flex justify-content-center flex-wrap gap-4">
-        <div class="px-5 py-1">
-          <img src="/images/profile-user.svg" alt="Profile Image" />
-          <p class="edit py-3 text-center">Edit profile image</p>
-        </div>
-        <div class="px-4">
-          <p>Username: <span class="profile-info">Example00</span></p>
-          <p>Email: <span class="profile-info">Example@noroff.no</span></p>
-          <p>
-            Password: <span class="profile-info"> ******** </span
-            ><span class="m-2">Change password</span>
-          </p>
-          <p>Posts: <span class="profile-info">3</span></p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container py-5">
-      <h4 class="white text-center py-3">Your posts:</h4>
-      <div class="d-flex justify-content-center">
-        <div class="">
-          <div class="card">
-            <div class="card-header text-center">
-              <h4 class="card-title">Post title</h4>
-            </div>
-            <div class="card-body text-center gap-3">
-              <img
-                src="/images/european-shorthair-8601492_640.jpg"
-                class="card-img"
-                alt="cat image"
-              />
-              <p class="card-text text-start py-1">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non
-                elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in
-                in leo. Fusce nec ex a turpis euismod semper. Nulla nec purus
-                feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui.
-                Nullam vel eros sit amet arcu vestibulum accumsan in in leo.
-                Fusce nec ex a turpis euismod semper.
-              </p>
-            </div>
-            <div class="card-footer d-flex justify-content-between">
-              <a href="/post/edit/" class="btn btn-primary">Edit</a>
-              <button class="btn btn-danger">Delete</button>
-            </div>
+  <div class="container py-5">
+    <h4 class="white text-center py-3">Your posts:</h4>
+    <div class="d-flex justify-content-center">
+      <div class="">
+        <div class="card">
+          <div class="card-header text-center">
+            <h4 class="card-title">Post title</h4>
+          </div>
+          <div class="card-body text-center gap-3">
+            <img src="/images/european-shorthair-8601492_640.jpg" class="card-img" alt="cat image" />
+            <p class="card-text text-start py-1">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+              nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non
+              elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in
+              in leo. Fusce nec ex a turpis euismod semper. Nulla nec purus
+              feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui.
+              Nullam vel eros sit amet arcu vestibulum accumsan in in leo.
+              Fusce nec ex a turpis euismod semper.
+            </p>
+          </div>
+          <div class="card-footer d-flex justify-content-between">
+            <a href="/post/edit/" class="btn btn-primary">Edit</a>
+            <button class="btn btn-danger">Delete</button>
           </div>
         </div>
       </div>
-      <div class="d-flex justify-content-center">
-        <div class="">
-          <div class="card">
-            <div class="card-header text-center">
-              <h4 class="card-title">Post title</h4>
-            </div>
-            <div class="card-body text-center gap-3">
-              <img
-                src="/images/european-shorthair-8601492_640.jpg"
-                class="card-img"
-                alt="cat image"
-              />
-              <p class="card-text text-start py-1">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non
-                elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in
-                in leo. Fusce nec ex a turpis euismod semper. Nulla nec purus
-                feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui.
-                Nullam vel eros sit amet arcu vestibulum accumsan in in leo.
-                Fusce nec ex a turpis euismod semper.
-              </p>
-            </div>
-            <div class="card-footer d-flex justify-content-between">
-              <button class="btn btn-primary">Edit</button>
-              <button class="btn btn-danger">Delete</button>
-            </div>
+    </div>
+    <div class="d-flex justify-content-center">
+      <div class="">
+        <div class="card">
+          <div class="card-header text-center">
+            <h4 class="card-title">Post title</h4>
+          </div>
+          <div class="card-body text-center gap-3">
+            <img src="/images/european-shorthair-8601492_640.jpg" class="card-img" alt="cat image" />
+            <p class="card-text text-start py-1">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+              nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non
+              elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in
+              in leo. Fusce nec ex a turpis euismod semper. Nulla nec purus
+              feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui.
+              Nullam vel eros sit amet arcu vestibulum accumsan in in leo.
+              Fusce nec ex a turpis euismod semper.
+            </p>
+          </div>
+          <div class="card-footer d-flex justify-content-between">
+            <button class="btn btn-primary">Edit</button>
+            <button class="btn btn-danger">Delete</button>
           </div>
         </div>
-      </div>
-      <div class="d-flex justify-content-center">
-        <div class="">
-          <div class="card">
-            <div class="card-header text-center">
-              <h4 class="card-title">Post title</h4>
-            </div>
-            <div class="card-body text-center gap-3">
-              <img
-                src="/images/european-shorthair-8601492_640.jpg"
-                class="card-img"
-                alt="cat image"
-              />
-              <p class="card-text text-start py-1">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non
-                elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in
-                in leo. Fusce nec ex a turpis euismod semper. Nulla nec purus
-                feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui.
-                Nullam vel eros sit amet arcu vestibulum accumsan in in leo.
-                Fusce nec ex a turpis euismod semper.
-              </p>
-            </div>
-            <div class="card-footer d-flex justify-content-between">
-              <button class="btn btn-primary">Edit</button>
-              <button class="btn btn-danger">Delete</button>
-            </div>
-          </div>
-        </div>
-      </div>
       </div>
     </div>
-  </body>
+    <div class="d-flex justify-content-center">
+      <div class="">
+        <div class="card">
+          <div class="card-header text-center">
+            <h4 class="card-title">Post title</h4>
+          </div>
+          <div class="card-body text-center gap-3">
+            <img src="/images/european-shorthair-8601492_640.jpg" class="card-img" alt="cat image" />
+            <p class="card-text text-start py-1">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+              nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non
+              elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in
+              in leo. Fusce nec ex a turpis euismod semper. Nulla nec purus
+              feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui.
+              Nullam vel eros sit amet arcu vestibulum accumsan in in leo.
+              Fusce nec ex a turpis euismod semper.
+            </p>
+          </div>
+          <div class="card-footer d-flex justify-content-between">
+            <button class="btn btn-primary">Edit</button>
+            <button class="btn btn-danger">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+
 </html>

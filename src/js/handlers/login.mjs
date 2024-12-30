@@ -10,7 +10,16 @@ export function setLoginFormListener() {
       const formData = new FormData(form);
       const profile = Object.fromEntries(formData.entries());
 
-      login(profile);
+      // Call login function
+      login(profile)
+        .then(() => {
+          // Redirect on successful login
+          window.location.href = "/feed"; // Redirect to the feed page
+        })
+        .catch((error) => {
+          // Handle login failure
+          alert(`Login failed: ${error.message}`);
+        });
     });
   }
 }

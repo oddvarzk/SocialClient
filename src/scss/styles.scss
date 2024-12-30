@@ -12,7 +12,7 @@ $colours: (
   "contrast-blue": #0e243a,
 
   // Secondary Color Palette
-  "white": #ffffff,
+  "white": #fffffff0,
   "light-gray": #bdbdbd,
   "medium-gray": #cccccc,
   "dark-gray": #272727,
@@ -65,12 +65,16 @@ h4 {
 .navbar-brand {
   color: theme-color("light-blue");
   font-size: 24px;
-  font-style: italic;
+  font-style: normal;
+  font-family: theme-font("primary-font");
 }
+
 
 .navbar-login {
   color: theme-color("white");
   text-decoration: none;
+  font-size: large;
+  font-weight: lighter;
 }
 .navbar-login:hover {
   color: theme-color("light-blue");
@@ -102,7 +106,7 @@ a {
   background-color: #000000;
 }
 .registerContainer {
-  background-color: theme-color("light-gray");
+  background-color: theme-color("white");
 }
 p {
   font-weight: lighter;

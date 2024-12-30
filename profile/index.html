@@ -46,95 +46,24 @@
         <p class="edit py-3 text-center">Edit profile image</p>
       </div>
       <div class="px-4">
-        <p>Username: <span class="profile-info">Example00</span></p>
-        <p>Email: <span class="profile-info">Example@noroff.no</span></p>
+        <p>Username: <span class="profile-name">Example00</span></p>
+        <p>Email: <span class="profile-email">Example@noroff.no</span></p>
         <p>
           Password: <span class="profile-info"> ******** </span>
           <span class="m-2">Change password</span>
         </p>
-        <p>Posts: <span class="profile-info">3</span></p>
       </div>
     </div>
   </div>
 
   <div class="container py-5">
     <h4 class="white text-center py-3">Your posts:</h4>
-
-    <!-- Example post card #1 -->
-    <div class="d-flex justify-content-center">
-      <div>
-        <div class="card">
-          <div class="card-header text-center">
-            <h4 class="card-title">Post title</h4>
-          </div>
-          <div class="card-body text-center gap-3">
-            <img src="/images/european-shorthair-8601492_640.jpg" class="card-img" alt="cat image" />
-            <p class="card-text text-start py-1">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-              nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non
-              elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in
-              in leo. Fusce nec ex a turpis euismod semper.
-            </p>
-          </div>
-          <div class="card-footer d-flex justify-content-between">
-            <a href="/post/edit/" class="btn btn-primary">Edit</a>
-            <button class="btn btn-danger">Delete</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Example post card #2 -->
-    <div class="d-flex justify-content-center">
-      <div>
-        <div class="card">
-          <div class="card-header text-center">
-            <h4 class="card-title">Post title</h4>
-          </div>
-          <div class="card-body text-center gap-3">
-            <img src="/images/european-shorthair-8601492_640.jpg" class="card-img" alt="cat image" />
-            <p class="card-text text-start py-1">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-              nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non
-              elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in
-              in leo. Fusce nec ex a turpis euismod semper.
-            </p>
-          </div>
-          <div class="card-footer d-flex justify-content-between">
-            <button class="btn btn-primary">Edit</button>
-            <button class="btn btn-danger">Delete</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Example post card #3 -->
-    <div class="d-flex justify-content-center">
-      <div>
-        <div class="card">
-          <div class="card-header text-center">
-            <h4 class="card-title">Post title</h4>
-          </div>
-          <div class="card-body text-center gap-3">
-            <img src="/images/european-shorthair-8601492_640.jpg" class="card-img" alt="cat image" />
-            <p class="card-text text-start py-1">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-              nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non
-              elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in
-              in leo. Fusce nec ex a turpis euismod semper.
-            </p>
-          </div>
-          <div class="card-footer d-flex justify-content-between">
-            <button class="btn btn-primary">Edit</button>
-            <button class="btn btn-danger">Delete</button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- Empty container we will fill with the logged-in user's actual posts -->
+    <div id="profile-posts-container" class="d-flex flex-column gap-5 align-items-center"></div>
   </div>
 
   <!-- Include your profile script -->
-  <script type="module" src="../src/js/storage/profile/index.mjs"></script>
+  <script type="module" src="../src/js/profile/index.mjs"></script>
 </body>
 
 </html>

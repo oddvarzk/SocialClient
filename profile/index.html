@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
-    content="This is the Login Page for the social media client. Where a user can login with a registered account." />
+    content="This is the Profile Page for the social media client. Here, the user can view their profile info." />
   <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="/dist/css/styles.css" />
   <link rel="stylesheet" href="/dist/css/profile.css" />
@@ -17,7 +17,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet" />
-  <title>Social Media Client</title>
+  <title>Social Media Client - Profile</title>
 </head>
 
 <body>
@@ -36,12 +36,12 @@
   <!-- Border -->
   <div class="border border-secondary"></div>
 
-
   <h4 class="text-center mt-4">Your Profile</h4>
 
   <div class="container">
     <div class="py-5 d-flex justify-content-center flex-wrap gap-4">
       <div class="px-5 py-1">
+        <!-- Profile Image -->
         <img src="/images/profile-user.svg" alt="Profile Image" />
         <p class="edit py-3 text-center">Edit profile image</p>
       </div>
@@ -49,7 +49,8 @@
         <p>Username: <span class="profile-info">Example00</span></p>
         <p>Email: <span class="profile-info">Example@noroff.no</span></p>
         <p>
-          Password: <span class="profile-info"> ******** </span><span class="m-2">Change password</span>
+          Password: <span class="profile-info"> ******** </span>
+          <span class="m-2">Change password</span>
         </p>
         <p>Posts: <span class="profile-info">3</span></p>
       </div>
@@ -58,8 +59,10 @@
 
   <div class="container py-5">
     <h4 class="white text-center py-3">Your posts:</h4>
+
+    <!-- Example post card #1 -->
     <div class="d-flex justify-content-center">
-      <div class="">
+      <div>
         <div class="card">
           <div class="card-header text-center">
             <h4 class="card-title">Post title</h4>
@@ -70,10 +73,7 @@
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
               nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non
               elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in
-              in leo. Fusce nec ex a turpis euismod semper. Nulla nec purus
-              feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui.
-              Nullam vel eros sit amet arcu vestibulum accumsan in in leo.
-              Fusce nec ex a turpis euismod semper.
+              in leo. Fusce nec ex a turpis euismod semper.
             </p>
           </div>
           <div class="card-footer d-flex justify-content-between">
@@ -83,8 +83,10 @@
         </div>
       </div>
     </div>
+
+    <!-- Example post card #2 -->
     <div class="d-flex justify-content-center">
-      <div class="">
+      <div>
         <div class="card">
           <div class="card-header text-center">
             <h4 class="card-title">Post title</h4>
@@ -95,10 +97,7 @@
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
               nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non
               elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in
-              in leo. Fusce nec ex a turpis euismod semper. Nulla nec purus
-              feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui.
-              Nullam vel eros sit amet arcu vestibulum accumsan in in leo.
-              Fusce nec ex a turpis euismod semper.
+              in leo. Fusce nec ex a turpis euismod semper.
             </p>
           </div>
           <div class="card-footer d-flex justify-content-between">
@@ -108,8 +107,10 @@
         </div>
       </div>
     </div>
+
+    <!-- Example post card #3 -->
     <div class="d-flex justify-content-center">
-      <div class="">
+      <div>
         <div class="card">
           <div class="card-header text-center">
             <h4 class="card-title">Post title</h4>
@@ -120,10 +121,7 @@
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
               nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non
               elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in
-              in leo. Fusce nec ex a turpis euismod semper. Nulla nec purus
-              feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui.
-              Nullam vel eros sit amet arcu vestibulum accumsan in in leo.
-              Fusce nec ex a turpis euismod semper.
+              in leo. Fusce nec ex a turpis euismod semper.
             </p>
           </div>
           <div class="card-footer d-flex justify-content-between">
@@ -134,7 +132,9 @@
       </div>
     </div>
   </div>
-  </div>
+
+  <!-- Include your profile script -->
+  <script type="module" src="../src/js/storage/profile/index.mjs"></script>
 </body>
 
 </html>

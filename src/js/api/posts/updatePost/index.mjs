@@ -1,10 +1,10 @@
 // /src/js/api/posts/updatePost.mjs
 
 import { updatePost } from "../update.mjs"; // Ensure correct path
-
+import { API_SOCIAL_URL } from "../../constants.mjs";
+import { fetchWithToken } from "../../fetchWithToken.mjs";
 
 export function showUpdatePostModal(postId) {
-  console.log(`Showing Update Post Modal for post ID: ${postId}`);
   
   // Fetch the current post data
   fetchPostDetails(postId)
@@ -30,7 +30,6 @@ export function showUpdatePostModal(postId) {
 async function fetchPostDetails(postId) {
   const baseURL = API_SOCIAL_URL.endsWith('/') ? API_SOCIAL_URL : `${API_SOCIAL_URL}/`;
   const url = `${baseURL}posts/${encodeURIComponent(postId)}?_author=true&_comments=true&_reactions=true`;
-  console.log(`Fetching post details from URL: ${url}`);
 
   try {
     const response = await fetchWithToken(url);
@@ -41,7 +40,6 @@ async function fetchPostDetails(postId) {
     }
 
     const data = await response.json();
-    console.log("Fetched post details:", data);
     return data.data; // Assuming the API returns the post under data.data
   } catch (error) {
     console.error("Error fetching post details:", error);
@@ -66,7 +64,6 @@ function populateModal(post) {
     updatePostDescription.value = post.body;
     updatePostImage.value = post.media?.url || "";
     updatePostLabel.value = post.tags && post.tags.length > 0 ? post.tags.join(', ') : "";
-    console.log("Populated modal with post data.");
   } else {
     console.error("One or more modal elements not found.");
   }
@@ -128,7 +125,6 @@ async function handleUpdatePostSubmit(event) {
     tags: updatePostLabel ? updatePostLabel.split(',').map(tag => tag.trim()) : [],
   };
 
-  console.log("Submitting updated post data:", updatedPostData);
 
   try {
     const response = await updatePost(updatedPostData);

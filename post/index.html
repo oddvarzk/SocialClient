@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
-    content="This is the Login Page for the social media client. Where a user can login with a registered account." />
+    content="This is the Post Page for the social media client. Here you can view a single post by its ID." />
   <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="/dist/css/styles.css" />
   <link rel="stylesheet" href="/dist/css/post.css" />
@@ -17,7 +17,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet" />
-  <title>Social Media Client</title>
+  <title>Social Media Client - Single Post</title>
 </head>
 
 <body>
@@ -43,14 +43,18 @@
       <div class="d-flex justify-content-center">
         <div class="card">
           <div class="card-header">
+            <!-- This is the Post Title element the script will update -->
             <h4 class="card-title text-center black">Post name</h4>
           </div>
           <div class="card-footer d-flex px-3 justify-content-center">
-            <img class="card-user-image" src="/images/profile-user.svg">
+            <!-- This is the Avatar and Author Username area -->
+            <img class="card-user-image" src="/images/profile-user.svg" alt="User avatar">
             <p class="card-username black py-2 px-2">User841</p>
           </div>
           <div class="card-body mx-auto">
+            <!-- This is the Post Image -->
             <img class="card-image px-3" src="/images/european-shorthair-8601492_640.jpg" alt="picture of cat">
+            <!-- This is the Post Body/Description -->
             <p class="card-text black px-3">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
               nec purus ut felis fermentum aliquam. Nullam nec purus ut felis
@@ -60,6 +64,11 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <!-- Include your single-post script here -->
+  <!-- Adjust the path to wherever your singlePost.mjs file actually is -->
+  <script type="module" src="/src/js/api/singlePost/index.mjs"></script>
 </body>
 
 </html>

@@ -1,3 +1,5 @@
+// /src/js/api/posts/create.mjs
+
 import { API_SOCIAL_URL } from "../constants.mjs";
 import { fetchWithToken } from "../fetchWithToken.mjs";
 

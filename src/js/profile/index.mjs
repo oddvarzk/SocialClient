@@ -3,6 +3,7 @@
 import { loadObject, loadToken } from "../storage/index.mjs"; // Adjust the path as needed
 import { API_SOCIAL_URL } from "../api/constants.mjs";
 import { fetchWithToken } from "../api/fetchWithToken.mjs";
+import { removePost } from "../api/posts/delete.mjs"; // Adjust the path as necessary
 
 export function initializeProfile() {
 
@@ -12,6 +13,8 @@ export function initializeProfile() {
     // DOM is already loaded
     handleProfile();
   }
+
+  let postIdToDelete = null; // Variable to store the post ID to delete
 
   async function handleProfile() {
 
@@ -59,6 +62,7 @@ export function initializeProfile() {
       // Ensure correct URL formation with trailing slash
       const baseURL = API_SOCIAL_URL.endsWith('/') ? API_SOCIAL_URL : `${API_SOCIAL_URL}/`;
       const url = `${baseURL}profiles/${encodeURIComponent(user.name)}?_posts=true&_author=true&_comments=true&_reactions=true`;
+      console.log("Fetching user posts from URL:", url);
       const response = await fetchWithToken(url);
 
       if (!response.ok) {
@@ -66,9 +70,11 @@ export function initializeProfile() {
       }
 
       const profileData = await response.json();
+      console.log("Profile Data:", profileData);
 
       // Access posts correctly based on API response structure
       const userPosts = profileData.data.posts || []; // Correct path
+      console.log("Fetched user posts:", userPosts);
 
       // 5. Render the posts into the #profile-posts-container
       const postsContainer = document.getElementById("profile-posts-container");
@@ -117,6 +123,44 @@ export function initializeProfile() {
 
     // 6. Add event listeners to the Update and Delete buttons
     addPostButtonListeners();
+
+    // 7. Add event listener to the confirm delete button
+    const confirmDeleteButton = document.getElementById("confirmDeleteButton");
+    if (confirmDeleteButton) {
+      confirmDeleteButton.addEventListener("click", async () => {
+        if (!postIdToDelete) {
+          alert("No post selected for deletion.");
+          return;
+        }
+
+        // Call the removePost function to delete the post
+        const result = await removePost(postIdToDelete);
+
+        if (result && result.success) {
+          // Remove the post card from the DOM
+          const postCard = document.querySelector(`button[data-post-id="${postIdToDelete}"]`).closest(".card");
+          if (postCard) {
+            postCard.remove();
+            alert("Post deleted successfully.");
+          }
+        } else {
+          // Handle deletion failure
+          alert(`Failed to delete post: ${result?.error || "Unknown error."}`);
+        }
+
+        // Hide the modal after action
+        const deleteModalElement = document.getElementById('deletePostModal');
+        if (deleteModalElement) {
+          const deleteModal = bootstrap.Modal.getInstance(deleteModalElement);
+          deleteModal.hide();
+        }
+
+        // Reset the post ID
+        postIdToDelete = null;
+      });
+    } else {
+      console.error("Confirm Delete button not found.");
+    }
   }
 
   /**
@@ -155,12 +199,21 @@ export function initializeProfile() {
    * Handles the click event for Delete buttons.
    * @param {Event} event - The click event.
    */
-  function handleDeleteButtonClick(event) {
+  async function handleDeleteButtonClick(event) {
     const button = event.currentTarget;
     const postId = button.getAttribute("data-post-id");
-    // Implement delete functionality here or import a delete module
-    // For now, we'll just log it
-    alert(`Delete functionality for post ID: ${postId} is not implemented yet.`);
+    postIdToDelete = postId; // Store the post ID for later use
+
+    // Show the delete confirmation modal
+    const deleteModalElement = document.getElementById('deletePostModal');
+    if (deleteModalElement) {
+      const deleteModal = new bootstrap.Modal(deleteModalElement, {
+        keyboard: false
+      });
+      deleteModal.show();
+    } else {
+      console.error("Delete Post modal element not found.");
+    }
   }
 
   /**

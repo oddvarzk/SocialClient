@@ -6,7 +6,7 @@
   "scripts": {
     "watch": "sass src/scss:dist/css --watch",
     "start": "live-server",
-    "build": "sass src/scss:dist/css && cp index.html dist/index.html",
+    "build": "sass src/scss:css",
     "dev": "npm-run-all --parallel watch start"
   },
   "repository": {

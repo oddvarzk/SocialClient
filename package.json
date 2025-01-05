@@ -6,7 +6,6 @@
   "scripts": {
     "watch": "sass src/scss:dist/css --watch",
     "start": "live-server",
-"build": "sass src/scss:dist/css && copy index.html dist\\index.html && xcopy feed dist\\feed /E /I && xcopy login dist\\login /E /I && xcopy post dist\\post /E /I && xcopy profile dist\\profile /E /I && mkdir dist\\css && copy node_modules\\bootstrap\\dist\\css\\bootstrap.min.css dist\\css\\bootstrap.min.css && mkdir dist\\js && copy src\\js\\* dist\\js\\",
     "dev": "npm-run-all --parallel watch start"
   },
   "repository": {

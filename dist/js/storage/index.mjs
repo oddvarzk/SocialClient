@@ -1,5 +1,3 @@
-// storage.js
-
 /**
  * ============================
  * 1) TOKEN AS A RAW STRING

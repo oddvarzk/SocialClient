@@ -1,5 +1,3 @@
-// /src/js/index.mjs
-
 import { setRegisterFormListener } from "./handlers/register.mjs";
 import { setLoginFormListener } from "./handlers/login.mjs";
 
@@ -8,7 +6,6 @@ function normalizePath(path) {
   return path.endsWith("/") && path.length > 1 ? path.slice(0, -1) : path;
 }
 
-// Get the current path
 const path = location.pathname;
 const normalizedPath = normalizePath(path);
 
@@ -56,8 +53,6 @@ switch (normalizedPath) {
         console.error("Error loading createPost.mjs:", error);
       });
     break;
-
-  // Add more cases as needed for other pages
 
   default:
     console.warn(`No handler defined for path: ${path}`);

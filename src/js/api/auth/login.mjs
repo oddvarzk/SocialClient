@@ -1,9 +1,8 @@
 import { API_BASE } from "../constants.mjs";
-// Import our new storage functions individually
 import { saveToken, saveObject } from "../../storage/index.mjs";
 
-const action = "auth/login"; // The API endpoint path
-const method = "POST";       // The HTTP method
+const action = "auth/login";
+const method = "POST";
 
 /**
  * Login function that sends a login request to the server and handles the response.
@@ -24,7 +23,7 @@ export async function login(profile) {
 
     if (!response.ok) {
       const errorData = await response.json();
-      throw new Error(errorData.message);  // Reject if login fails
+      throw new Error(errorData.message);
     }
 
     const result = await response.json();

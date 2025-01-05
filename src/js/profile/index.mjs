@@ -1,9 +1,7 @@
-// /src/js/storage/profile/profile.mjs
-
-import { loadObject, loadToken } from "../storage/index.mjs"; // Adjust the path as needed
+import { loadObject, loadToken } from "../storage/index.mjs";
 import { API_SOCIAL_URL } from "../api/constants.mjs";
 import { fetchWithToken } from "../api/fetchWithToken.mjs";
-import { removePost } from "../api/posts/delete.mjs"; // Adjust the path as necessary
+import { removePost } from "../api/posts/delete.mjs";
 
 export function initializeProfile() {
 
@@ -62,7 +60,6 @@ export function initializeProfile() {
       // Ensure correct URL formation with trailing slash
       const baseURL = API_SOCIAL_URL.endsWith('/') ? API_SOCIAL_URL : `${API_SOCIAL_URL}/`;
       const url = `${baseURL}profiles/${encodeURIComponent(user.name)}?_posts=true&_author=true&_comments=true&_reactions=true`;
-      console.log("Fetching user posts from URL:", url);
       const response = await fetchWithToken(url);
 
       if (!response.ok) {
@@ -70,11 +67,9 @@ export function initializeProfile() {
       }
 
       const profileData = await response.json();
-      console.log("Profile Data:", profileData);
 
       // Access posts correctly based on API response structure
-      const userPosts = profileData.data.posts || []; // Correct path
-      console.log("Fetched user posts:", userPosts);
+      const userPosts = profileData.data.posts || [];
 
       // 5. Render the posts into the #profile-posts-container
       const postsContainer = document.getElementById("profile-posts-container");

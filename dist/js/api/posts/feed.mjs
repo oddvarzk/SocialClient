@@ -1,5 +1,3 @@
-// /src/js/api/posts/feed.mjs
-
 import { API_SOCIAL_URL, API_KEY } from "../../api/constants.mjs";
 
 let allPosts = []; // Global array to store posts
@@ -19,7 +17,6 @@ function renderPosts() {
 
   postsContainer.innerHTML = "";
 
-  // 1) Filter by the search query
   let filteredPosts = allPosts;
   const trimmedQuery = searchInput ? searchInput.value.trim().toLowerCase() : "";
   if (trimmedQuery) {
@@ -30,35 +27,25 @@ function renderPosts() {
     });
   }
 
-  // 2) Determine the sort order from the dropdown
   const sortValue = sortDropdown ? sortDropdown.value : "newest";
 
-  // 3) Sort the filtered array by "created" date
   if (sortValue === "newest") {
-    // Descending date => newest first
     filteredPosts.sort((a, b) => new Date(b.created) - new Date(a.created));
   } else {
-    // Ascending date => oldest first
     filteredPosts.sort((a, b) => new Date(a.created) - new Date(b.created));
   }
 
-  // 4) Keep track of which image URLs we've already shown
   const seenImages = new Set();
 
-  // 5) Loop through the filtered+sorted posts and create cards
   filteredPosts.forEach((post) => {
-    // Skip if no media URL
     if (!post.media?.url) {
       return;
     }
-    // If we've already rendered this image URL, skip
     if (seenImages.has(post.media.url)) {
       return;
     }
-    // Mark this image URL as seen
     seenImages.add(post.media.url);
 
-    // Create the post card
     const postCard = document.createElement("div");
     postCard.classList.add("py-5", "px-3");
     postCard.innerHTML = `
@@ -95,13 +82,13 @@ function renderPosts() {
  * @param {number} page - The page number to fetch.
  */
 export async function fetchPosts(page = 1) {
-  const token = localStorage.getItem("token"); // Get JWT token from localStorage
+  const token = localStorage.getItem("token");
 
   if (!token) {
     console.log("No token found. Prompting login.");
     if (!window.hasLoginAlerted) {
       alert("You need to login first.");
-      window.hasLoginAlerted = true; // Set a flag
+      window.hasLoginAlerted = true;
       window.location.href = "/login/";
     }
     return;
@@ -110,17 +97,15 @@ export async function fetchPosts(page = 1) {
   const getPostsURL = `${API_SOCIAL_URL}posts?page=${page}`;
 
   try {
-    // Make the API call to fetch posts
     const response = await fetch(getPostsURL, {
       method: "GET",
       headers: {
-        Authorization: `Bearer ${token}`, // JWT token
-        "X-Noroff-API-Key": API_KEY,      // API key
+        Authorization: `Bearer ${token}`,
+        "X-Noroff-API-Key": API_KEY,
         "Content-Type": "application/json",
       },
     });
 
-    // If unauthorized, alert the user and redirect
     if (response.status === 401) {
       console.log("Unauthorized response received.");
       if (!window.hasLoginAlerted) {
@@ -133,12 +118,9 @@ export async function fetchPosts(page = 1) {
 
     const data = await response.json();
 
-    // Check if the data contains posts
     if (data && data.data) {
-      // Merge newly fetched posts into the global array
       allPosts = [...allPosts, ...data.data];
 
-      // Handle pagination / load-more button
       const loadMoreButton = document.getElementById("load-more-button");
       if (data.meta && data.meta.isLastPage) {
         if (loadMoreButton) loadMoreButton.style.display = "none";
@@ -146,7 +128,6 @@ export async function fetchPosts(page = 1) {
         if (loadMoreButton) loadMoreButton.style.display = "inline-block";
       }
 
-      // Now render them with the current sort order (and search/duplicate checks)
       renderPosts();
     } else {
       console.error("No posts data available in the response");
@@ -156,12 +137,10 @@ export async function fetchPosts(page = 1) {
   }
 }
 
-// Event listener for DOMContentLoaded to set up event handlers
 document.addEventListener("DOMContentLoaded", () => {
   let currentPage = 1;
   let searchQuery = "";
 
-  // Grab references to DOM elements
   const loadMoreButton = document.getElementById("load-more-button");
   const sortDropdown = document.getElementById("sort-dropdown");
   const searchInput = document.getElementById("search-input");
@@ -195,12 +174,11 @@ document.addEventListener("DOMContentLoaded", () => {
   if (searchInput) {
     searchInput.addEventListener("input", (event) => {
       searchQuery = event.target.value;
-      renderPosts(); // Re-render to apply search + sort + duplicates skip
+      renderPosts();
     });
   } else {
     console.warn("Search input not found.");
   }
 
-  // Initial call to load page 1
   fetchPosts(currentPage);
 });

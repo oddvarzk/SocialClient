@@ -1,18 +1,15 @@
-// /src/js/api/posts/update.mjs
-
 import { API_SOCIAL_URL } from "../constants.mjs";
 import { fetchWithToken } from "../fetchWithToken.mjs";
 
 const action = "posts";
 
 export async function updatePost(postData) {
-  // Ensure there's a slash between API_SOCIAL_URL and action
   const baseURL = API_SOCIAL_URL.endsWith('/') ? API_SOCIAL_URL : `${API_SOCIAL_URL}/`;
   const updatePostURL = `${baseURL}${action}/${postData.id}`;
 
   try {
     const response = await fetchWithToken(updatePostURL, {
-      method: "PUT", // Use "PATCH" if partial updates are supported/preferred
+      method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },

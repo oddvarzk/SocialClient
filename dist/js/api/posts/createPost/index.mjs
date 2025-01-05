@@ -1,6 +1,4 @@
-// /src/js/api/posts/createPost.mjs
-
-import { createPost } from "../create.mjs"; // Adjust the path if necessary
+import { createPost } from "../create.mjs";
 
 export function initializeCreatePost() {
   console.log("initializeCreatePost called");
@@ -8,7 +6,6 @@ export function initializeCreatePost() {
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", handleCreatePost);
   } else {
-    // DOM is already loaded
     handleCreatePost();
   }
 
@@ -22,7 +19,7 @@ export function initializeCreatePost() {
     }
 
     form.addEventListener("submit", async (event) => {
-      event.preventDefault(); // Prevent the default form submission
+      event.preventDefault();
 
       // Gather form data
       const title = form.postTitle.value.trim();
@@ -35,8 +32,6 @@ export function initializeCreatePost() {
         alert("Please provide both a title and a description for your post.");
         return;
       }
-
-      // Optional: Further validation (e.g., image URL format)
 
       const postData = {
         title,
@@ -51,10 +46,7 @@ export function initializeCreatePost() {
         const response = await createPost(postData);
         if (response) {
           alert("Post created successfully!");
-          // Optionally, redirect to the Feed page
           window.location.href = "/feed/";
-          // Alternatively, reset the form
-          // form.reset();
         } else {
           alert("Failed to create post. Please try again.");
         }

@@ -1,12 +1,9 @@
-// /src/js/api/posts/updatePost.mjs
-
-import { updatePost } from "../update.mjs"; // Ensure correct path
+import { updatePost } from "../update.mjs";
 import { API_SOCIAL_URL } from "../../constants.mjs";
 import { fetchWithToken } from "../../fetchWithToken.mjs";
 
 export function showUpdatePostModal(postId) {
   
-  // Fetch the current post data
   fetchPostDetails(postId)
     .then(postData => {
       if (postData) {
@@ -40,7 +37,7 @@ async function fetchPostDetails(postId) {
     }
 
     const data = await response.json();
-    return data.data; // Assuming the API returns the post under data.data
+    return data.data;
   } catch (error) {
     console.error("Error fetching post details:", error);
     return null;
@@ -80,7 +77,7 @@ function displayModal() {
     });
     updatePostModal.show();
 
-    // Add event listener for form submission
+    // Event listener for form submission
     const updatePostForm = document.getElementById("updatePostForm");
     if (updatePostForm) {
       updatePostForm.addEventListener("submit", handleUpdatePostSubmit);
@@ -97,7 +94,7 @@ function displayModal() {
  * @param {Event} event - The form submission event.
  */
 async function handleUpdatePostSubmit(event) {
-  event.preventDefault(); // Prevent default form submission
+  event.preventDefault();
 
   const updatePostId = document.getElementById("updatePostId").value;
   const updatePostTitle = document.getElementById("updatePostTitle").value.trim();
@@ -111,14 +108,13 @@ async function handleUpdatePostSubmit(event) {
     return;
   }
 
-  // Optional: Further validation (e.g., image URL format)
   if (updatePostImage && !isValidURL(updatePostImage)) {
     alert("Please enter a valid URL for the image.");
     return;
   }
 
   const updatedPostData = {
-    id: updatePostId, // Ensure that 'id' is included
+    id: updatePostId, 
     title: updatePostTitle,
     body: updatePostDescription,
     media: updatePostImage ? { url: updatePostImage } : null,

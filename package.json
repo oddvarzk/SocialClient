@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "watch": "sass src/scss:dist/css --watch",
-    "build": "sass src/scss:dist/css",
+    "build:css": "sass src/scss:dist/css",
+    "build:js": "xcopy src\\js dist\\js /E /I /Y",
+    "build:images": "xcopy images dist\\images /E /I /Y",
+    "build": "npm run build:css && npm run build:js && npm run build:images",
     "start": "live-server",
     "dev": "npm-run-all --parallel watch start"
   },

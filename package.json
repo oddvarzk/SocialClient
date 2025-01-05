@@ -10,7 +10,7 @@
     "build:bootstrap": "cpx \"node_modules/bootstrap/dist/css/bootstrap.min.css\" dist/css",
     "build:js": "cpx \"src/js/**/*\" dist/js",
     "build:images": "cpx \"images/**/*\" dist/images",
-    "build:html": "cpx \"*.html\" dist/",
+    "build:html": "cpx \"**/*.html\" dist/ --preserve",
     "build:redirects": "echo '/* /index.html 200' > dist/_redirects",
     "build": "npm run clean && npm run build:css && npm run build:bootstrap && npm run build:js && npm run build:images && npm run build:html && npm run build:redirects",
     "start": "live-server",
